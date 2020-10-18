@@ -9,9 +9,13 @@ export default function QuizScreen() {
     return (
         <div>
             <h1>Trivia Quiz Screen</h1>
+            <hr/>
             <Dasboard/>
+            <hr/>
             <Questions/>
+            <hr/>
             <Options/>
+            <hr/>
             <Users/>
         </div>
     )

@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +11,42 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.site-page-footer{
+  background-color: black;
+  color: white;
+}
+
+#btn{
+  height: 40px;
+  width: 200px;
+}
+
+/* .setter-button{
+
+  padding: 30px 50px;
+ 
+}
+
+.answerer-button{
+  
+  padding: 30px 50px;
+
+}
+ */
+
+.head{
+  background-color:lightgray;
+  padding-bottom: 45px;
+}
+
+.authenButton{
+margin:10px;
+}
+
+
+.screenButton{
+  margin :10px;
 }

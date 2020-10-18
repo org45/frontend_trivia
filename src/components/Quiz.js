@@ -15,8 +15,9 @@ export default function Quiz() {
     return (
         <>
         <button onClick={handleQuizButtonApp}>App</button>
-
-        <button onClick={handleQuizButton}>Quiz Trivia</button>
+        <br/>
+        <br/>
+        <button onClick={handleQuizButton}>Quiz Trivia Screen</button>
         </>
     )
 }
