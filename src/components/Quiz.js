@@ -17,7 +17,7 @@ export default function Quiz() {
         <button onClick={handleQuizButtonApp}>App</button>
         <br/>
         <br/>
-        <button onClick={handleQuizButton}>Quiz Trivia Screen</button>
+        <button onClick={handleQuizButton} >Quiz Trivia Screen</button>
         </>
     )
 }
