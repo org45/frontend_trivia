@@ -80,11 +80,11 @@ export default function AppOptions() {
         2
       </button>
       <br />
-      <button onClick={handle3} value="3">
+      <button onClick={handle3} value={input3}>
         3
       </button>
       <br />
-      <button onClick={handle4} value="4">
+      <button onClick={handle4} value={input4}>
         4
       </button>
       <br />
