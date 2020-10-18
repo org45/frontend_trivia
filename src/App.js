@@ -6,10 +6,12 @@ import TriviaQuiz from './components/Quiz'
 import QuizScreen from './components/QuizScreen'
 import TriviaQuizApp from './components/appOptions'
 import {LoginProvider} from './context/LoginContext'
+import {LastOptionProvider} from './context/LastOptionContext'
 
 function App() {
   return (
     <LoginProvider>
+    <LastOptionProvider>
     <Router>
 
             <Switch>
@@ -18,6 +20,7 @@ function App() {
             <Route path="/triviaQuizApp"><TriviaQuizApp/></Route>
             </Switch>
     </Router>
+    </LastOptionProvider>
     </LoginProvider>
 
   );

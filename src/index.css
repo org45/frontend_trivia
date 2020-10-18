@@ -50,3 +50,13 @@ margin:10px;
 .screenButton{
   margin :10px;
 }
+.progressCircle{
+  height: 100px;
+  width: 100px;
+}
+
+.gImage{
+  border-radius: 50%;
+ 
+  padding: 10px;
+}

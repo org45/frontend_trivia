@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect,useContext} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import io from "socket.io-client";
 
@@ -7,11 +7,14 @@ let socket = io(ENDPOINT);
 
 
 
+
 export default function Options() {
     const [answerOption1,setAnswerOption1]=useState([])
     const [answerOption2,setAnswerOption2]=useState([])
     const [answerOption3,setAnswerOption3]=useState([])
     const [answerOption4,setAnswerOption4]=useState([])
+
+   
 
     var [aValue, setAnswer] = useState({ personalInfo: {}, answer: 0 });
 
@@ -23,8 +26,7 @@ export default function Options() {
      
     }, []);
 
-
-
+   
     useEffect(() => {
         console.log(answerOption1)
     switch(aValue.answer){
@@ -82,3 +84,20 @@ export default function Options() {
         </div>
     )
 }
+
+
+
+/* 
+
+lastInput printing once said go
+
+with every go there will be scoring push to the backend
+once we get the score from backend we will update it in the ui
+
+what we get from backend 
+
+    individual round scores
+    wedge score
+
+
+*/

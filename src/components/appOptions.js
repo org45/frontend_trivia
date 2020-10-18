@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import Authen from "./Authen";
+import {LastOptionContext} from '../context/LastOptionContext';
+
 
 import {
   BrowserRouter as Router,
@@ -16,11 +18,15 @@ const ENDPOINT = "http://localhost:5000";
 let socket = io(ENDPOINT);
 
 export default function AppOptions() {
+
+
   const [input1, setInput1] = useState(1);
   const [input2, setInput2] = useState(2);
   const [input3, setInput3] = useState(3);
   const [input4, setInput4] = useState(4);
-  const [lastInput, setLastInput] = useState(0);
+  const [lastInput, setLastInput] = useContext(LastOptionContext);
+  
+
 
   var aValue = {
     personalInfo: JSON.parse(localStorage.getItem("personalInfo")),
@@ -29,7 +35,8 @@ export default function AppOptions() {
 
   const handleInputSubmission = () => {
     aValue["answer"] = lastInput;
-    socket.emit("answer", JSON.stringify(aValue));
+    console.log(lastInput)
+    socket.emit("lastAnswer", JSON.stringify(aValue));
   };
 
   const handle1 = (e) => {
@@ -43,7 +50,7 @@ export default function AppOptions() {
 
   const handle2 = (e) => {
     e.preventDefault();
-    setInput1(2);
+    setInput2(2);
     console.log(e.target.value);
     setLastInput(e.target.value);
     aValue["answer"] = input2;
@@ -52,7 +59,7 @@ export default function AppOptions() {
 
   const handle3 = (e) => {
     e.preventDefault();
-    setInput1(3);
+    setInput3(3);
     console.log(e.target.value);
     setLastInput(e.target.value);
     aValue["answer"] = input3;
@@ -60,7 +67,7 @@ export default function AppOptions() {
   };
   const handle4 = (e) => {
     e.preventDefault();
-    setInput1(4);
+    setInput4(4);
     console.log(e.target.value);
     setLastInput(e.target.value);
     aValue["answer"] = input4;
